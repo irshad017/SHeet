@@ -108,7 +108,7 @@ const AddCollaboratorForm = ({ spreadsheetId }) => {
     if (username.trim()) {
       try {
         console.log('Submitting:', { spreadsheetId, username });
-        const response = await axios.post('/api/add-collaborator', {
+        const response = await axios.post('https://back-it.onrender.com/api/add-collaborator', {
           spreadsheetId,
           collaboratorUsername: username,
         });
